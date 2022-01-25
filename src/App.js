@@ -5,7 +5,7 @@ function App() {
   const [weight, setWeight] = useState(0)
   const [bottles, setBottles] = useState(0)
   const [time, setTime] = useState(0)
-  const [gender, setGender] = useState()
+  const [gender, setGender] = useState("male")
   const [result, setResult] = useState(0)
  
 
@@ -75,14 +75,14 @@ function App() {
         <label>Gender: </label>
 
         <input className="form-check-input" 
-        type="radio" name='gender' id='male'
+        type="radio" name='gender' 
         value="male" 
-        onChange={e => setGender(e.target.value)}
+        onChange={e => setGender(e.target.value)} defaultChecked
         />
         <label htmlFor="male">Male</label>
 
         <input className="form-check-input" 
-        type="radio" name='gender' id='female'
+        type="radio" name='gender' 
         value="female"
         onChange={e => setGender(e.target.value)}
         />
